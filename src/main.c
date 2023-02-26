@@ -101,8 +101,6 @@ int main() {
 
     if (dev_idx == DEV_PA_UNSET) {
         fprintf(stderr, "cannot find pulse output device, falling back to default\n");
-#else
-        fprintf(stderr, "unsupported platform, using default output device\n");
 #endif
         dev_idx = Pa_GetDefaultOutputDevice();
         dev_info = Pa_GetDeviceInfo(dev_idx);
